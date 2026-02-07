@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TechNova | Supercharging Progress</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+body{background:#eef1f7}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    top:16px;
+    left:50%;
+    transform:translateX(-50%);
+    width:95%;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(14px);
+    border-radius:18px;
+    padding:14px 26px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+.nav-left{display:flex;align-items:center;gap:10px}
+.logo{font-size:22px;font-weight:700;color:#0b5ed7}
+.tagline{font-size:12px;color:#555}
+.nav-menu a{
+    margin:0 14px;
+    text-decoration:none;
+    font-size:14px;
+    color:#222;
+    font-weight:500;
+}
+.nav-menu a:hover{color:#0b5ed7}
+.contact-btn{
+    padding:8px 16px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    background:#fff;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    height:80vh;
+    background:linear-gradient(120deg,#5b4bff,#3fa9f5,#43d1b8);
+    display:flex;
+    align-items:center;
+    padding:120px 8%;
+    color:#fff;
+}
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    align-items:center;
+}
+.hero-text{
+    animation:fadeLeft 1.2s ease;
+}
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+.hero-text p{
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+.primary-btn{
+    padding:12px 26px;
+    background:#fff;
+    color:#000;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+.circle{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,0.8);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-weight:600;
+    animation:fadeRight 1.2s ease;
+}
+.circle img{
+    width:80%;
+    height:80%;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* STATS */
+.stats{
+    width:90%;
+    margin:-80px auto 80px;
+    background:linear-gradient(120deg,#4f46e5,#3b82f6);
+    border-radius:18px;
+    padding:35px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    color:#fff;
+}
+.stat-box h3{font-size:28px}
+.stat-box p{font-size:13px;margin-top:8px}
+
+/* SECTIONS */
+section{padding:120px 8%}
+.section-title{font-size:34px;margin-bottom:30px}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* CARDS */
+.card, .service-card{
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+    cursor:pointer;
+}
+.card:hover, .service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* SCROLL ANIMATION */
+.animate-card{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.8s ease;
+}
+.animate-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+    background:#001f3f;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeLeft{
+    from{opacity:0;transform:translateX(-60px)}
+    to{opacity:1;transform:translateX(0)}
+}
+@keyframes fadeRight{
+    from{opacity:0;transform:translateX(60px)}
+    to{opacity:1;transform:translateX(0)}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero-content{flex-direction:column;text-align:center}
+    .nav-menu{display:none}
+    .stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-left">
+        <div class="logo">TechNova</div>
+        <div class="tagline">Supercharging Progress</div>
+    </div>
+
+    <div class="nav-menu">
+        <a href="https://www.hcltech.com/services" target="_blank">What We Do</a>
+        <a href="https://www.hcltech.com/industries" target="_blank">Industries</a>
+        <a href="https://www.hcltech.com/about-us" target="_blank">Who We Are</a>
+        <a href="https://www.hcltech.com/careers" target="_blank">Careers</a>
+    </div>
+
+    <a href="https://www.hcltech.com/contact-us" target="_blank">
+        <button class="contact-btn">Contact Us →</button>
+    </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>TechNova at the <br>India AI Impact Summit 2026</h1>
+            <p>New Delhi | Bharat Mandapam | Feb 16–20<br>Hall 4, Booth 4.5</p>
+            <a href="https://www.hcltech.com/artificial-intelligence" target="_blank">
+                <button class="primary-btn">Read more →</button>
+            </a>
+        </div>
+        <div class="circle">
+            <img src="your-image.jpg" alt="AI Summit">
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+    <div class="stat-box"><h3>45%</h3><p>Reduction in app development effort</p></div>
+    <div class="stat-box"><h3>20%</h3><p>IT Ops MTTR reduction</p></div>
+    <div class="stat-box"><h3>$100M</h3><p>Operational cost savings</p></div>
+    <div class="stat-box"><h3>87%</h3><p>Investigation time reduced</p></div>
+</section>
+
+<!-- WHAT WE DO -->
+<section>
+<h2 class="section-title">What We Do</h2>
+<div class="cards">
+    <div class="service-card animate-card" data-link="https://www.hcltech.com/digital">
+        <h3>Digital Transformation</h3>
+        <p>Reimagining businesses through digital innovation.</p>
+    </div>
+    <div class="service-card animate-card" data-link="https://www.hcltech.com/cloud">
+        <h3>Cloud & Infrastructure</h3>
+        <p>Scalable, secure and agile cloud solutions.</p>
+    </div>
+    <div class="service-card animate-card" data-link="https://www.hcltech.com/cybersecurity">
+        <h3>Cybersecurity</h3>
+        <p>Protecting enterprises with next-gen security.</p>
+    </div>
+    <div class="service-card animate-card" data-link="https://www.hcltech.com/artificial-intelligence">
+        <h3>AI & Analytics</h3>
+        <p>Turning data into intelligent decisions.</p>
+    </div>
+</div>
+</section>
+
+<!-- INDUSTRIES -->
+<section>
+<h2 class="section-title">Industries</h2>
+<div class="cards">
+    <div class="card animate-card" data-link="https://www.hcltech.com/industries/banking-and-financial-services">Banking & Finance</div>
+    <div class="card animate-card" data-link="https://www.hcltech.com/industries/healthcare">Healthcare</div>
+    <div class="card animate-card" data-link="https://www.hcltech.com/industries/retail">Retail</div>
+    <div class="card animate-card" data-link="https://www.hcltech.com/industries/manufacturing">Manufacturing</div>
+</div>
+</section>
+
+<footer>
+© 2026 TechNova Solutions. All rights reserved.
+</footer>
+
+<script>
+// Scroll animation
+const animatedCards = document.querySelectorAll('.animate-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+animatedCards.forEach(card => observer.observe(card));
+
+// Click navigation for all cards
+document.querySelectorAll('[data-link]').forEach(card => {
+  card.addEventListener('click', () => {
+    const link = card.getAttribute('data-link');
+    if (link) {
+      window.open(link, '_blank');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+<!-- STATS -->
+<section class="stats">
+    <div class="stat-box"><h3>45%</h3><p>Reduction in app development effort</p></div>
+    <div class="stat-box"><h3>20%</h3><p>IT Ops MTTR reduction</p></div>
+    <div class="stat-box"><h3>$100M</h3><p>Operational cost savings</p></div>
+    <div class="stat-box"><h3>87%</h3><p>Investigation time reduced</p></div>
+</section>
+
+<!-- SLIDE 1 -->
+<section id="careers">
+    <div class="slide reveal">
+        <div>
+            <h2>Supercharge Your Career with Us</h2>
+            <p>Join us if you want to grow, innovate and make an impact.</p>
+            <button class="btn" onclick="window.open('https://www.hcltech.com/careers','_blank')">Explore careers →</button>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=900" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 2 -->
+<section id="awards">
+    <div class="slide reveal">
+        <div>
+            <h2>Global Recognition for Sustained Excellence</h2>
+            <p>Our awards reflect our relentless pursuit of superior results.</p>
+            <button class="btn" onclick="window.open('https://www.hcltech.com/about-us/awards','_blank')">View awards →</button>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?q=80&w=900" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 3 -->
+<section id="about">
+    <div class="slide reveal">
+        <div>
+            <h2>Ready for Now. Built for What’s Next.</h2>
+            <p>We harness technology and people to drive impact at scale.</p>
+            <button class="btn" onclick="window.open('https://www.hcltech.com/about-us','_blank')">Learn more →</button>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=900" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 4 (NEW) -->
+<section>
+    <div class="slide reveal">
+        <div>
+            <h2>AI that Accelerates Business</h2>
+            <p>Leverage GenAI and intelligent automation to transform operations and decision-making.</p>
+            <button class="btn" onclick="window.open('https://www.hcltech.com/artificial-intelligence','_blank')">Explore AI →</button>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=900" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 5 (NEW) -->
+<section>
+    <div class="slide reveal">
+        <div>
+            <h2>Cloud at Enterprise Scale</h2>
+            <p>Modernize infrastructure and applications with secure, scalable cloud solutions.</p>
+            <button class="btn" onclick="window.open('https://www.hcltech.com/cloud','_blank')">Discover Cloud →</button>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=900" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- SLIDE 6 (NEW) -->
+<section>
+    <div class="slide reveal">
+        <div>
+            <h2>Engineering the Future</h2>
+            <p>From product engineering to digital platforms, we build what’s next for enterprises.</p>
+            <button class="btn" onclick="window.open('https://www.hcltech.com/engineering','_blank')">View Engineering →</button>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1581091215367-59ab6c1c5b99?q=80&w=900" alt="">
+        </div>
+    </div>
+</section>
+
+<footer>
+© 2026 TechNova Solutions. All rights reserved.
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+  const trigger = window.innerHeight * 0.85;
+  reveals.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < trigger){
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>
